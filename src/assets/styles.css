@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2d3e4f;
+    
+}
+
+.sensors{
+    display: flex;
+    justify-content: center;
+}
+
+.sensors .temp,
+.sensors .humidity, 
+.sensors .carbonDioxide {
+    width: 230px;
+    background-color: #e2e2e2;
+    margin: 10px;
+    height: 120px;
+}
+
+.sensors .temp header,
+.sensors .humidity header,
+.sensors .carbonDioxide header
+{
+    background-color: #cacaca;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.sensors img {
+    width: 70px;
+    vertical-align: middle;
+}
+
+.sensors .tempValue,
+.sensors .humidityValue,
+.sensors .carbonDioxideValue {
+    font-weight: 600;
+    font-size: 3em;
+    vertical-align: middle
+}
+
+.sensors .tempSymbol,
+.sensors .humiditySymbol, 
+.sensors .carbonDioxideSymbol {
+    font-size: 0.4em;
+    vertical-align: super
+}
