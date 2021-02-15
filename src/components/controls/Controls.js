@@ -1,6 +1,7 @@
-import FunControl from "./FunControl"
+import FanControl from "./FanControl"
 import LightControl from "./LightControl"
 import styled from 'styled-components';
+import SprayerControl from "./SprayerControl";
 
 const ControlsDiv = styled.div`
     display: flex;
@@ -12,8 +13,9 @@ const ControlsDiv = styled.div`
 const Controls = () => {
     return (
         <ControlsDiv>
-            <FunControl />
+            <FanControl />
             <LightControl />
+            <SprayerControl />
         </ControlsDiv>
     )
 }
