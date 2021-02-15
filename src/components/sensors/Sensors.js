@@ -15,14 +15,11 @@ const SensorsDiv = styled.div`
 
 export const Sensors = () => {
 
-    const tempValue = 21.5;
-    const humidityValue = 95;
-    const carbonDioxideValue = 5200;
     return (
         <SensorsDiv>
-            <Temp tempValue={tempValue} />
-            <Humidity humidityValue={humidityValue} />
-            <CarbonDioxide carbonDioxideValue={carbonDioxideValue} />
+            <Temp />
+            <Humidity />
+            <CarbonDioxide />
         </SensorsDiv>
     )
 }

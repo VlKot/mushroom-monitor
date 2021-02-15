@@ -3,6 +3,7 @@ import { Sensors } from './sensors/Sensors'
 import styled from 'styled-components'
 import { device } from '../common/device'
 import Controls from './controls/Controls'
+import { Provider } from '../common/Provider'
 
 
 const MainStyled = styled.div`
@@ -36,8 +37,10 @@ const MainStyled = styled.div`
 export const Main = () => {
     return (
         <MainStyled>
-            <Sensors/>
-            <Controls />
+            <Provider>
+                <Sensors />
+                <Controls />
+            </Provider>
         </MainStyled>
     )
 

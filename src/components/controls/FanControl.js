@@ -1,8 +1,9 @@
 import fan from '../../assets/icons/fan.png'
 import styled, { keyframes } from 'styled-components'
 import { device } from '../../common/device'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import StyledButton from '../../common/StyledButton';
+import { Context } from '../../common/Provider';
 
 
 
@@ -47,18 +48,15 @@ const FanImg = styled.img`
 
 
 const FanControl = () => {
-  const [isActive, setActive] = useState(false);
 
-  const activateFan = (action) => {
-    setActive(action)
-  }
+  const { isActiveFan, toggleFan } = useContext(Context);
 
   return (
-    <FanControlStyled >
+    <FanControlStyled>
       <header>Fan</header>
-      <FanImg src={fan} alt="fan" animate={isActive} />
+      <FanImg src={fan} alt="fan" animate={isActiveFan} />
 
-      <StyledButton isActive={isActive} activate={activateFan} />
+      <StyledButton isActive={isActiveFan} activate={toggleFan} />
     </FanControlStyled>
   )
 }

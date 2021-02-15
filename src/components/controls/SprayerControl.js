@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { device } from "../../common/device";
 import StyledButton from "../../common/StyledButton";
 import sprayer from '../../assets/icons/sprayer.png'
+import { Context } from "../../common/Provider";
 
 
 const SprayerControlStyled = styled.div`
@@ -110,17 +111,14 @@ const Spray = styled.i`
 `
 
 const SprayerControl = () => {
-    const [isActive, setActive] = useState(false);
-
-    const activeSpray = (action) => {
-        setActive(action)
-    }
+  
+  const {isActiveSpray, toggleSpray} = useContext(Context);
 
     return (
         <SprayerControlStyled>
             <header>Spray</header>
             <img src={sprayer} alt="sprayer" />
-            <Spray animate={isActive}>
+            <Spray animate={isActiveSpray}>
                 <i className="drop1"></i>
                 <i className="drop2"></i>
                 <i className="drop3"></i>
@@ -128,7 +126,7 @@ const SprayerControl = () => {
             </Spray>
 
 
-            <StyledButton isActive={isActive} activate={activeSpray} />
+            <StyledButton isActive={isActiveSpray} activate={toggleSpray} />
         </SprayerControlStyled>
     )
 }

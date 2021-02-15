@@ -2,8 +2,9 @@ import bulb from '../../assets/icons/bulb-tr.png'
 import bulbOn from '../../assets/icons/bulb-tr-on.png'
 import styled, { keyframes } from 'styled-components'
 import { device } from '../../common/device'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import StyledButton from '../../common/StyledButton';
+import { Context } from '../../common/Provider';
 
 
 const LightControlStyled = styled.div`
@@ -35,20 +36,17 @@ const LightImg = styled.div`
 `
 
 const LightControl = () => {
-  const [isActive, setActive] = useState(false);
 
-  const activateLight = (action) => {
-    setActive(action)
-  }
+  const {isActiveLight, toggleLight} = useContext(Context);
 
   return (
     <LightControlStyled >
       <header>Light</header>
-      <LightImg animate={isActive} >
-        <img src={isActive ? bulbOn : bulb} alt="lamp" />
+      <LightImg animate={isActiveLight} >
+        <img src={isActiveLight ? bulbOn : bulb} alt="lamp" />
       </LightImg>
 
-      <StyledButton isActive={isActive} activate={activateLight} />
+      <StyledButton isActive={isActiveLight} activate={toggleLight} />
     </LightControlStyled>
   )
 

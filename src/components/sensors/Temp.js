@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import temp_icon from '../../assets/icons/temp-sm.png'
 import styled from 'styled-components'
 import { device } from '../../common/device'
 import TempControl from '../controls/TempControl'
+import { Context } from '../../common/Provider'
 
 const TempStyled = styled.div`
     // width: 230px;
@@ -34,15 +35,16 @@ const TempStyled = styled.div`
 `
 
 
-export const Temp = (props) => {
-    const { tempValue } = props
+export const Temp = () => {
+
+    const {temperature} = useContext(Context);
 
     return (
         <TempStyled >
             <header>Temperature</header>
             <img src={temp_icon} alt="temp" />
-            <div><b>{tempValue}</b>
-                <span className="tempSymbol">°C</span>
+            <div><b>{temperature}</b>
+                <span className="tempSymbol"> °C</span>
             </div>
         </TempStyled>
     )

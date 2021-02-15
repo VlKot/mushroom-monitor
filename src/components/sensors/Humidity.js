@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import humidity_icon from '../../assets/icons/humidity-sm.png'
 import styled from 'styled-components'
 import { device } from '../../common/device'
+import { Context } from '../../common/Provider'
 
 
 const HumidityStyled = styled.div`
@@ -32,15 +33,15 @@ const HumidityStyled = styled.div`
     
 `
 
-export const Humidity = (props) => {
-    const { humidityValue } = props
+export const Humidity = () => {
+    const {humidity} = useContext(Context);
 
     return (
         <HumidityStyled>
             <header>Humidity</header>
             <img src={humidity_icon} alt="humidity" />
-            <div><b>{humidityValue}</b>
-                <span className="humiditySymbol">%</span>
+            <div><b>{humidity}</b>
+                <span className="humiditySymbol"> %</span>
             </div>
         </HumidityStyled>
     )
