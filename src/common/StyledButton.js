@@ -13,17 +13,17 @@ const StyledButtonCont = styled.div`
     background: linear-gradient(0deg, #2d3e4f, #000);
     outline: none;
     border-radius: 20px;
-    box-shadow: 0 0 0 3px #2d3e4f, 0 0 0 1px #3e3e3e, inset 0 0 5px rgb(0,0,0,1);
+    box-shadow: 0 0 0 3px #2d3e4f, 0 0 0 2px #3e3e3e, inset 0 0 5px rgb(0,0,0,1);
   }
 
   & > input:checked[type="checkbox"]:nth-of-type(1) {
     background: linear-gradient(0deg, #2e79be, #1b83e2);
-    box-shadow: 0 0 0 3px #2d3e4f, 0 0 0 1px #3e3e3e, inset 0 0 5px rgba(0,0,0,1);
+    box-shadow: 0 0 0 3px #2d3e4f, 0 0 0 2px #3e3e3e, inset 0 0 5px rgba(0,0,0,1);
   }
   
   & > input:checked[type="checkbox"]:nth-of-type(2) {
     background: linear-gradient(0deg, #70a1ff, #1e90ff);
-    box-shadow: 0 0 0 3px #2d3e4f, 0 0 0 1px #3e3e3e, inset 0 0 5px rgba(0,0,0,1);
+    box-shadow: 0 0 0 3px #2d3e4f, 0 0 0 2px #3e3e3e, inset 0 0 5px rgba(0,0,0,1);
   }
   
   & > input[type="checkbox"]:before {
@@ -62,37 +62,37 @@ const StyledButtonCont = styled.div`
   
   @media ${device.laptop} { 
     input[type="checkbox"] {
-        width:120px;
-        height:40px;
-        box-shadow: 0 0 0 4px #2d3e4f, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+        width:100px;
+        height:35px;
+        box-shadow: 0 0 0 2px #2d3e4f, 0 0 0 4px #3e3e3e, inset 0 0 8px rgb(0 0 0);
     }
 
     & > input:checked[type="checkbox"]:nth-of-type(1) {
-        box-shadow: 0 0 0 4px #2d3e4f, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+        box-shadow: 0 0 0 2px #2d3e4f, 0 0 0 4px #3e3e3e, inset 0 0 8px rgba(0,0,0,1);
       }
       
       & > input:checked[type="checkbox"]:nth-of-type(2) {
-        box-shadow: 0 0 0 4px #2d3e4f, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+        box-shadow: 0 0 0 2px #2d3e4f, 0 0 0 4px #3e3e3e, inset 0 0 8px rgba(0,0,0,1);
       }
 
     & > input[type="checkbox"]:before {
        
-        width:80px;
-        height:40px;
+        width:70px;
+        height:35px;
     }
 
     & > input:checked[type="checkbox"]:before {
-        left:40px;
+        left:30px;
     }
 
     & > input[type="checkbox"]:after{
-        left:70px;
+        left:60px;
         width:4px;
         height:4px;
     }
 
     & > input:checked[type="checkbox"]:after {
-        left:110px;
+        left:89px;
     }
 }
  

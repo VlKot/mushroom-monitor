@@ -35,6 +35,8 @@ export const Provider = ({ children }) => {
         isActiveFan: state.isActiveFan,
         isActiveLight: state.isActiveLight,
         isActiveSpray: state.isActiveSpray,
+        temperatureFluctuations: state.temperatureFluctuations,
+        humidityFluctuations: state.humidityFluctuations,
         toggleFan: (value) => { 
             dispatch({ type: actions.TOGGLE_FAN, value }) 
         },

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { device } from '../common/device'
 import Controls from './controls/Controls'
 import { Provider } from '../common/Provider'
+import Charts from './charts/Charts'
 
 
 const MainStyled = styled.div`
@@ -40,6 +41,7 @@ export const Main = () => {
             <Provider>
                 <Sensors />
                 <Controls />
+                <Charts />
             </Provider>
         </MainStyled>
     )
