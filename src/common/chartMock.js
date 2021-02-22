@@ -32,15 +32,44 @@ const formattedTime = (unix_timestamp) => {
 }
 
 export const tempMock = (dates) => {
+    var counterDo = 50;
+    var intialRandom = Math.random() * 5 + 16;
+
     return dates.map((date) => {
         //float random from 16.0 to 21.0
-    return [date, (Math.random() * 5 + 16).toFixed(1)]
+        let currentRandom;
+
+        for (let index = 0; index < counterDo; index++) {
+            currentRandom = Math.random() * 6 + 16;
+
+            if (currentRandom < intialRandom + 0.5 && currentRandom > intialRandom - 0.5) {
+                intialRandom = currentRandom;
+                break
+            }
+        }
+
+        return [date, currentRandom.toFixed(1)]
     })
 }
 
 export const humidityMock = (dates) => {
+    var counterDo = 50;
+    var intialRandom = Math.floor(Math.random() * 80 + 20);
+
     return dates.map((date) => {
         //int random from 50 to 100
-    return [date, Math.floor(Math.random() * 50 + 50)]
+        let currentRandom;
+
+        for (let index = 0; index < counterDo; index++) {
+            currentRandom = Math.floor(Math.random() * 80 + 20);
+
+            if (currentRandom < intialRandom + 5 && currentRandom > intialRandom - 5) {
+                intialRandom = currentRandom;
+                break
+            }
+        }
+
+
+        return [date, currentRandom]
     })
 }

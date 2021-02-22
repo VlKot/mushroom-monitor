@@ -2,7 +2,7 @@ import { dateMock, tempMock, humidityMock } from "./chartMock";
 
 export const intitialState = {
 
-    temperature: 21.5,
+    temperature: 19.5,
     humidity: 95,
     carbonDioxide: 5200,
     isActiveFan: false,
